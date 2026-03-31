@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <style>
+    .title { font: bold 20px sans-serif; fill: #333; }
+    .subtitle { font: 14px sans-serif; fill: #666; }
+    .label { font: 12px sans-serif; fill: #333; }
+    .pin-label { font: bold 10px monospace; fill: #fff; }
+    .component-label { font: bold 12px sans-serif; fill: #333; }
+    .wire { stroke-width: 2; fill: none; }
+    .wire-i2c { stroke: #4CAF50; }
+    .wire-i2s { stroke: #2196F3; }
+    .wire-button { stroke: #FF9800; }
+    .wire-led { stroke: #E91E63; }
+    .wire-power { stroke: #F44336; }
+    .wire-gnd { stroke: #000; }
+  </style>
+  
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f5f5f5"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" class="title" text-anchor="middle">Pico 2 USB Keyboard/Mouse/Speaker - Wiring Diagram</text>
+  <text x="450" y="50" class="subtitle" text-anchor="middle">Composite USB Device: Audio (UAC2) + HID (Keyboard + Mouse)</text>
+  
+  <!-- Legend -->
+  <rect x="20" y="70" width="180" height="120" fill="#fff" stroke="#ccc" rx="5"/>
+  <text x="30" y="90" class="component-label">Wire Colors:</text>
+  <line x1="30" y1="105" x2="60" y2="105" class="wire wire-i2c"/>
+  <text x="70" y="110" class="label">I2C (ADS1115)</text>
+  <line x1="30" y1="125" x2="60" y2="125" class="wire wire-i2s"/>
+  <text x="70" y="130" class="label">I2S (Audio)</text>
+  <line x1="30" y1="145" x2="60" y2="145" class="wire wire-button"/>
+  <text x="70" y="150" class="label">Buttons</text>
+  <line x1="30" y1="165" x2="60" y2="165" class="wire wire-led"/>
+  <text x="70" y="170" class="label">LEDs</text>
+  
+  <!-- Pico 2 Board -->
+  <rect x="300" y="150" width="300" height="400" fill="#1a472a" stroke="#0d2818" stroke-width="3" rx="10"/>
+  <text x="450" y="180" class="title" text-anchor="middle" fill="#fff">Raspberry Pi Pico 2</text>
+  <text x="450" y="200" class="subtitle" text-anchor="middle" fill="#aaa">(RP2350)</text>
+  
+  <!-- USB Connector -->
+  <rect x="420" y="530" width="60" height="25" fill="#888" stroke="#666" rx="3"/>
+  <text x="450" y="548" class="label" text-anchor="middle" fill="#fff">USB</text>
+  
+  <!-- Left side pins -->
+  <g transform="translate(300, 220)">
+    <!-- GP0 - I2C SDA -->
+    <rect x="-5" y="0" width="30" height="18" fill="#4CAF50"/>
+    <text x="10" y="13" class="pin-label" text-anchor="middle">GP0</text>
+    
+    <!-- GP1 - I2C SCL -->
+    <rect x="-5" y="25" width="30" height="18" fill="#4CAF50"/>
+    <text x="10" y="38" class="pin-label" text-anchor="middle">GP1</text>
+    
+    <!-- GP2 - Hat UP -->
+    <rect x="-5" y="50" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="63" class="pin-label" text-anchor="middle">GP2</text>
+    
+    <!-- GP3 - Hat RIGHT -->
+    <rect x="-5" y="75" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="88" class="pin-label" text-anchor="middle">GP3</text>
+    
+    <!-- GP4 - Hat DOWN -->
+    <rect x="-5" y="100" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="113" class="pin-label" text-anchor="middle">GP4</text>
+    
+    <!-- GP5 - Hat LEFT -->
+    <rect x="-5" y="125" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="138" class="pin-label" text-anchor="middle">GP5</text>
+    
+    <!-- GP6 - Hat CENTER -->
+    <rect x="-5" y="150" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="163" class="pin-label" text-anchor="middle">GP6</text>
+    
+    <!-- GND -->
+    <rect x="-5" y="200" width="30" height="18" fill="#333"/>
+    <text x="10" y="213" class="pin-label" text-anchor="middle">GND</text>
+    
+    <!-- 3V3 -->
+    <rect x="-5" y="250" width="30" height="18" fill="#F44336"/>
+    <text x="10" y="263" class="pin-label" text-anchor="middle">3V3</text>
+  </g>
+  
+  <!-- Right side pins -->
+  <g transform="translate(575, 220)">
+    <!-- GP15 - Space button -->
+    <rect x="-5" y="0" width="30" height="18" fill="#FF9800"/>
+    <text x="10" y="13" class="pin-label" text-anchor="middle">GP15</text>
+    
+    <!-- GP17 - LED1 -->
+    <rect x="-5" y="50" width="30" height="18" fill="#E91E63"/>
+    <text x="10" y="63" class="pin-label" text-anchor="middle">GP17</text>
+    
+    <!-- GP18 - LED2 -->
+    <rect x="-5" y="75" width="30" height="18" fill="#E91E63"/>
+    <text x="10" y="88" class="pin-label" text-anchor="middle">GP18</text>
+    
+    <!-- GP19 - I2S LRCLK -->
+    <rect x="-5" y="125" width="30" height="18" fill="#2196F3"/>
+    <text x="10" y="138" class="pin-label" text-anchor="middle">GP19</text>
+    
+    <!-- GP20 - I2S BCLK -->
+    <rect x="-5" y="150" width="30" height="18" fill="#2196F3"/>
+    <text x="10" y="163" class="pin-label" text-anchor="middle">GP20</text>
+    
+    <!-- GP21 - I2S DIN -->
+    <rect x="-5" y="175" width="30" height="18" fill="#2196F3"/>
+    <text x="10" y="188" class="pin-label" text-anchor="middle">GP21</text>
+    
+    <!-- GP22 - I2S MCLK -->
+    <rect x="-5" y="200" width="30" height="18" fill="#2196F3"/>
+    <text x="10" y="213" class="pin-label" text-anchor="middle">GP22</text>
+    
+    <!-- VBUS (5V) -->
+    <rect x="-5" y="250" width="30" height="18" fill="#F44336"/>
+    <text x="10" y="263" class="pin-label" text-anchor="middle">VBUS</text>
+  </g>
+  
+  <!-- ADS1115 Module -->
+  <rect x="50" y="200" width="120" height="100" fill="#607D8B" stroke="#455A64" stroke-width="2" rx="5"/>
+  <text x="110" y="230" class="component-label" text-anchor="middle" fill="#fff">ADS1115</text>
+  <text x="110" y="250" class="label" text-anchor="middle" fill="#ddd">16-bit ADC</text>
+  <text x="70" y="275" class="label" fill="#fff">SDA</text>
+  <text x="70" y="290" class="label" fill="#fff">SCL</text>
+  
+  <!-- I2C Wires -->
+  <path d="M 170 265 L 200 265 L 200 229 L 295 229" class="wire wire-i2c"/>
+  <path d="M 170 280 L 210 280 L 210 254 L 295 254" class="wire wire-i2c"/>
+  
+  <!-- MAX98357A Module -->
+  <rect x="700" y="320" width="150" height="140" fill="#3F51B5" stroke="#303F9F" stroke-width="2" rx="5"/>
+  <text x="775" y="350" class="component-label" text-anchor="middle" fill="#fff">MAX98357A</text>
+  <text x="775" y="370" class="label" text-anchor="middle" fill="#ddd">I2S DAC</text>
+  <text x="720" y="400" class="label" fill="#fff">LRC (GP19)</text>
+  <text x="720" y="420" class="label" fill="#fff">BCLK (GP20)</text>
+  <text x="720" y="440" class="label" fill="#fff">DIN (GP21)</text>
+  
+  <!-- I2S Wires -->
+  <path d="M 600 345 L 650 345 L 650 393 L 700 393" class="wire wire-i2s"/>
+  <path d="M 600 370 L 660 370 L 660 413 L 700 413" class="wire wire-i2s"/>
+  <path d="M 600 395 L 670 395 L 670 433 L 700 433" class="wire wire-i2s"/>
+  
+  <!-- Hat Switch -->
+  <rect x="50" y="350" width="120" height="130" fill="#795548" stroke="#5D4037" stroke-width="2" rx="5"/>
+  <text x="110" y="380" class="component-label" text-anchor="middle" fill="#fff">5-Way Hat</text>
+  <text x="110" y="400" class="label" text-anchor="middle" fill="#ddd">Switch</text>
+  <text x="70" y="425" class="label" fill="#fff">UP (F1)</text>
+  <text x="70" y="440" class="label" fill="#fff">RIGHT (F2)</text>
+  <text x="70" y="455" class="label" fill="#fff">DOWN (F3)</text>
+  <text x="70" y="470" class="label" fill="#fff">LEFT (F4)</text>
+  
+  <!-- Button Wires -->
+  <path d="M 170 420 L 220 420 L 220 270 L 295 270" class="wire wire-button"/>
+  <path d="M 170 435 L 230 435 L 230 295 L 295 295" class="wire wire-button"/>
+  <path d="M 170 450 L 240 450 L 240 320 L 295 320" class="wire wire-button"/>
+  <path d="M 170 465 L 250 465 L 250 345 L 295 345" class="wire wire-button"/>
+  
+  <!-- Space Button -->
+  <rect x="700" y="200" width="100" height="50" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="750" y="225" class="component-label" text-anchor="middle" fill="#fff">SPACE</text>
+  <text x="750" y="240" class="label" text-anchor="middle" fill="#ddd">Button</text>
+  
+  <!-- Space button wire -->
+  <path d="M 600 220 L 700 220" class="wire wire-button"/>
+  
+  <!-- LEDs -->
+  <ellipse cx="730" cy="530" rx="20" ry="20" fill="#FFEB3B" stroke="#FBC02D" stroke-width="2"/>
+  <text x="730" y="535" class="label" text-anchor="middle">LED1</text>
+  <text x="730" y="560" class="label" text-anchor="middle">GP17</text>
+  
+  <ellipse cx="800" cy="530" rx="20" ry="20" fill="#FFEB3B" stroke="#FBC02D" stroke-width="2"/>
+  <text x="800" y="535" class="label" text-anchor="middle">LED2</text>
+  <text x="800" y="560" class="label" text-anchor="middle">GP18</text>
+  
+  <!-- LED wires -->
+  <path d="M 600 270 L 640 270 L 640 510 L 710 510 L 710 510" class="wire wire-led"/>
+  <path d="M 600 295 L 650 295 L 650 500 L 780 500 L 780 510" class="wire wire-led"/>
+  
+  <!-- Speaker -->
+  <rect x="700" y="480" width="50" height="30" fill="#9E9E9E" stroke="#757575" stroke-width="2" rx="3"/>
+  <text x="725" y="500" class="label" text-anchor="middle" fill="#fff">SPK</text>
+  
+  <!-- Notes -->
+  <rect x="20" y="600" width="860" height="90" fill="#fff" stroke="#ccc" rx="5"/>
+  <text x="30" y="620" class="component-label">Connections Summary:</text>
+  <text x="30" y="640" class="label">• I2C (GP0/GP1): ADS1115 ADC reads analog rotary encoder → mouse scroll wheel</text>
+  <text x="30" y="655" class="label">• I2S (GP19-22): MAX98357A DAC outputs 48kHz stereo audio from USB</text>
+  <text x="30" y="670" class="label">• Buttons (GP2-6, GP15): Hat switch → F1-F5 keys, Space button → Space key (active low with internal pull-ups)</text>
+  <text x="30" y="685" class="label">• LEDs (GP17-18): Status indicators with 220-470Ω resistors to GND</text>
+</svg>
